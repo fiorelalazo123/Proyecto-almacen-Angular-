@@ -18,8 +18,8 @@
   position: absolute;
   display: block;
   visibility: visible;
-  left: 247px;
-  top: 268px;
+  left: 184px;
+  top: 158px;
   z-index: 5;
 }
 
@@ -28,7 +28,7 @@
   min-width: 426px;
   max-width: 426px;
   white-space: normal;
-  font-size: 93px;
+  font-size: 85px;
   line-height: 94px;
   font-weight: 400;
   color: rgb(255, 255, 255);
@@ -49,14 +49,14 @@
 .frontbox{
   background-color: white;
   border-radius: 20px;
-  height: 352px;
-  width: 518px;
+  height: 329px;
+  width: 474px;
   z-index: 10;
   font-family: 'Roboto', sans-serif;
   position: absolute;
   right: 0;
-  margin-right: 18%;
-  margin-top: 9%;
+  margin-right: 5%;
+  margin-top: 5%;
   margin-left: 3%;
   transition: right .8s ease-in-out;
 }
