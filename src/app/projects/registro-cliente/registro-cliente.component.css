@@ -1,0 +1,139 @@
+.wrapper-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/assets/img/slider-nosotros.jpg');
+  width: 100%;
+  height: 1000px;
+  background-size: cover;
+}
+
+.wrapper-logo {
+  padding: 30px 0 0 84px;
+}
+
+.img-logo{
+  width: 230px;
+  height: 43px;
+}
+
+.wrapper-title{
+  position: absolute;
+  display: block;
+  visibility: visible;
+  left: 247px;
+  top: 268px;
+  z-index: 5;
+}
+
+.title{
+  z-index: 5;
+  min-width: 426px;
+  max-width: 426px;
+  white-space: normal;
+  font-size: 93px;
+  line-height: 94px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  letter-spacing: 0px;
+  font-family: Signika;
+  text-shadow: rgb(58, 54, 51) 0px 0px 25px;
+  visibility: inherit;
+  transition: none 0s ease 0s;
+  text-align: inherit;
+  border-width: 0px;
+  margin: 0px;
+  padding: 0px;
+  min-height: 0px;
+  max-height: none;
+  opacity: 1;
+}
+
+.frontbox{
+  background-color: white;
+  border-radius: 20px;
+  height: 660px;
+  width: 751px;
+  z-index: 10;
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  right: 0;
+  margin-right: 11%;
+  margin-top: 0%;
+  margin-left: 3%;
+  transition: right .8s ease-in-out;
+
+}
+
+.wrapper-country {
+  border-top: 1px solid #F3F0F0;
+  padding-top: 20px;
+}
+
+/* front box content*/
+.login, .signup{
+  padding: 33px;
+  text-align: center;
+}
+
+.login h2,
+.signup h2 {
+  color: #35B729;
+  font-size:27px;
+}
+
+.display-text{
+  display: flex;
+}
+
+.input-label{
+  color: black !important;
+  font-size:17px !important;
+  margin-bottom: 6px;
+  text-align: left;
+}
+
+.input-label-final{
+  color: black !important;
+  font-size:17px !important;
+  margin-bottom: 6px;
+  text-align: end;
+}
+
+.inputs-flex{
+  margin-right: 55px;
+  width: 546px;
+}
+.login input,
+.signup input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  background-color: #f2f2f2;
+  border: none;
+  margin-bottom:20px;
+  font-size: 14px;
+}
+
+.wrapper-button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-color {
+  background-color: #FFC300 !important;
+  margin-left: 101px;
+}
+
+.login button,
+.signup button{
+  background-color: #35B729;
+  border: none;
+  color:white;
+  font-size: 19px;
+  font-weight: 300;
+  box-sizing: content-box;
+  padding:10px;
+  border-radius: 10px;
+  width: 213px;
+  position: absolute;
+  bottom: 30px;
+  cursor: pointer;
+}

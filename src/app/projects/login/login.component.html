@@ -1,0 +1,22 @@
+<section class="wrapper-container">
+  <div class="wrapper-logo">
+    <img class="img-logo" src="/assets/img/logo-ecoandino.png" alt="logo">
+  </div>
+  <div class="wrapper-title">
+    <div class="title">Superalimentos de nuestra tierra</div>
+  </div>
+
+  <div class="frontbox">
+    <div class="login">
+      <h2>LOG IN</h2>
+      <div class="inputbox">
+        <input type="text" [(ngModel)]="user" name="user" placeholder="  USUARIO">
+        <input type="password" [(ngModel)]="password" name="password" placeholder="  CONTRASEÑA">
+      </div>
+        <p (click)="abrirRegistro()">¿NO ESTÁS REGISTRADO?</p>
+      <div class="wrapper-button">
+        <button type="submit" (click)="entrarMenuPr()">Iniciar Sesión</button>
+      </div>
+    </div>
+  </div>
+</section>
