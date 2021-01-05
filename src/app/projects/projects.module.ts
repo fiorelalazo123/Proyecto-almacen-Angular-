@@ -6,11 +6,15 @@ import { ProjectsContainer } from './projects.container';
 import { RegistroClienteComponent } from './registro-cliente/registro-cliente.component';
 import { MantenimientoProductosComponent } from './mantenimiento-productos/mantenimiento-productos.component';
 import { RegistrarProductoComponent } from './registrar-producto/registrar-producto.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     ProjectsRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   declarations: [
     ProjectsComponent,

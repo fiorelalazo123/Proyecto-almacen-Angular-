@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ClienteData } from './cliente-model';
+import { ClienteService } from './cliente.service';
 
 @Component({
   selector: 'app-registro-cliente',
@@ -8,13 +10,23 @@ import { Router } from '@angular/router';
 })
 export class RegistroClienteComponent implements OnInit {
 
-  constructor(public router: Router) { }
+  cliente: ClienteData = new ClienteData();
+
+  constructor(public router: Router,
+              private clienteService: ClienteService) { }
 
   ngOnInit(): void {
   }
 
-  public irLogin() {
+  irLogin(): void {
     this.router.navigate(['login']);
+  }
+
+  registrar(): void {
+    console.log(this.cliente);
+    this.clienteService.registrarCliente(this.cliente).subscribe(
+      res => this.router.navigate(['login'])
+    );
   }
 
 }

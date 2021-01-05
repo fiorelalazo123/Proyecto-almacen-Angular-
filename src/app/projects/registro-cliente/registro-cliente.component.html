@@ -11,34 +11,34 @@
       <h2>REGISTRO CLIENTE</h2>
       <h2 class="input-label">Completa los campos a continuación para realizar tu registro.</h2>
       <div class="inputbox">
-        <input type="text" placeholder=" RAZÓN SOCIAL">
+        <input type="text" [(ngModel)]="cliente.razonSocial" name="razonSocial" placeholder=" RAZÓN SOCIAL">
         <div class="display-text">
           <div class="inputs-flex">
-            <input type="text" placeholder=" TELÉFONO FIJO">
+            <input type="text" [(ngModel)]="cliente.telCliente" name="telCliente" placeholder=" TELÉFONO FIJO">
           </div>
-          <input type="text" placeholder=" TELÉFONO CELULAR">
+          <input type="text" [(ngModel)]="cliente.celCliente" name="celCliente" placeholder=" TELÉFONO CELULAR">
         </div>
         <div class="display-text">
           <div class="inputs-flex">
-            <input type="number" placeholder=" RUC">
+            <input type="number" [(ngModel)]="cliente.rucCliente" name="rucCliente" placeholder=" RUC">
           </div>
           <input type="text" placeholder=" CONTACTO">
         </div>
         <div class="inputs-flex">
-          <input type="password" placeholder=" PASSWORD">
+          <input type="password" [(ngModel)]="cliente.passCliente" name="passCliente" placeholder=" PASSWORD">
         </div>
-        <input type="text" placeholder=" E-MAIL">
+        <input type="text" [(ngModel)]="cliente.corrCliente" name="corrCliente" placeholder=" E-MAIL">
         <div class="wrapper-country">
           <div class="display-text">
             <div class="inputs-flex">
-              <input type="text" placeholder=" PAIS">
+              <input type="text" [(ngModel)]="cliente.dirCliente" name="dirCliente" placeholder=" DIRECCION">
             </div>
-            <input type="text" placeholder=" DEPARTAMENTO">
+             <input type="text" [(ngModel)]="cliente.paisCliente" name="paisCliente" placeholder=" PAIS">
           </div>
         </div>
         <h2 class="input-label-final">Su usuario será su numero de RUC</h2>
         <div class="wrapper-button">
-          <button id="buttom-1" (click)="irLogin()">REGISTRAR</button>
+          <button id="buttom-1" (click)="registrar()">REGISTRAR</button>
         </div>
         <button id="buttom-2" (click)="irLogin()" class="button-color">ATRÁS</button>
       </div>
