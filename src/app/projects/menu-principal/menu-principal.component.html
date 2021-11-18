@@ -10,43 +10,71 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+            <a class="nav-link" (click)="irCatalogoProductos()">Productos <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Mantenimientos
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Producto-presentación</a>
-              <a class="dropdown-item" (click)="irProductos()">Productos</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Presentación</a>
-            </div>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Lista Ordenes
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Orden-muestra</a>
-              <a class="dropdown-item" href="#">Órdenes-pedidos</a>
-              <!-- <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a> -->
-            </div>
-          </li>
-
           <li class="nav-item">
-            <a class="nav-link" href="#">Reportes</a>
+            <a class="nav-link" (click)="irMisOrdenesMuestra()">Mis Ordenes Muestras</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="irMisPedidos()">Mis Pedidos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cerrar Sesión</a>
           </li>
         </ul>
       </div>
     </nav>
   </header>
 
-  <div>
-    <h1 class="principal-title">Herramientas de Ventas</h1>
+  <div class="info">
+    <div class="info-column">
+      <div class="info-content">
+        <h1>Misión</h1>
+        <div>Contribuir a mejorar la calidad de vida de los diversos participantes en nuestra cadena de valor.
+          Cultivamos,
+          procesamos y comercializamos superalimentos utilizando materias primas andinas y amazónicas que cumplan con
+          las
+          certificaciones globales más exigentes. </div>
+      </div>
+      <div class="info-content">
+        <h1>Visión</h1>
+        <div>Ser un agronegocio líder de superalimentos orgánicos andinos y amazónicos en los mercados nacionales e
+          internacionales, a través de la constante innovación en nuestras actividades. </div>
+      </div>
+      <div class="info-content">
+        <h1>Valores</h1>
+        <div>Consciencia ambiental <br>
+          Calidad <br>
+          Responsabilidad Social <br>
+          Integridad <br>
+          Enfoque al cliente <br>
+          Trabajo en equipo
+        </div>
+      </div>
+    </div>
+    <div class="info-column">
+      <img class="image-ecoandino" src="assets/img/ecoandino-about.png" alt="image">
+    </div>
+    <div class="info-column">
+      <div class="info-content">
+        <h1>Premios</h1>
+        <h1>2017</h1>
+        <div>Premio de Innovación Expoalimentaria, 1er lugar - Productos funcionales y nutracéuticos paraMaca
+          Mornings®<br>
+          Expoalimentaria, premio Tendencia de vida sana por Maca Mornings®<br><br></div>
+      </div>
+      <div class="info-content">
+        <h1>2016</h1>
+        <div>
+          Expoalimentaria Premio a la innovación, 1er lugar - Snacks para Hearty Flakes®<br>
+          Expoalimentaria, premio Tendencia de vida sana por Hearty Flakes®<br>
+          Dircetur, Mejor exportador del año</div>
+      </div>
+      <div class="info-content">
+        <h1>2015</h1>
+        <div>
+          Expoalimentaria Premio a la Innovación, 1er lugar - Productos de Cacao y Café para Cacao Mornings®</div>
+      </div>
+    </div>
   </div>
 </section>

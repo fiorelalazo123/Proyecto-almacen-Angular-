@@ -1,0 +1,199 @@
+<header class="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"> <img class="img-logo" src="/assets/img/logo-ecoandino.png" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" (click)="irCatalogoProductos()">Productos <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="irMisOrdenesMuestra()">Mis Ordenes Muestras</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="irMisPedidos()">Mis Pedidos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Cerrar Sesion</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<h1 class="title">Cotizar Pedido</h1>
+<section class="wrapper-quotation">
+  <div class="wrapper-image">
+    <img *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000201'" class="card-img-top"
+      src="assets/img/pp00201.png" alt="Card image cap">
+    <h2 *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000201'">Arracacha</h2>
+
+    <img *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000101'" class="card-img-top"
+      src="assets/img/pp00101.png" alt="Card image cap">
+    <h2 *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000201'">Algarrobo</h2>
+
+    <img *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000301'" class="card-img-top"
+      src="assets/img/pp00301.png" alt="Card image cap">
+    <h2 *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000301'">Cacao en Polvo</h2>
+
+    <img *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000302'" class="card-img-top"
+      src="assets/img/pp00302.png" alt="Card image cap">
+    <h2 *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000302'">Cacao en Barra</h2>
+
+    <img *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000405'" class="card-img-top"
+      src="assets/img/pp00405.png" alt="Card image cap">
+    <h2 *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000405'">Camu Camu</h2>
+
+    <img *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000304'" class="card-img-top"
+      src="assets/img/images.jpg" alt="Card image cap">
+    <h2 *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000304'">Cacao Manteca</h2>
+  </div>
+
+  <section class="wrapper-description">
+    <h1 *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000201'">Arracacha</h1>
+    <div *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000201'" class="categoria">
+      <strong>Categoría: Andino</strong>
+    </div>
+
+    <h1 *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000101'">Algarrobo</h1>
+    <div *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000101'" class="categoria">
+      <strong>Categoría: Andino</strong>
+    </div>
+
+    <h1 *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000301'">Cacao en Polvo</h1>
+    <div *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000301'" class="categoria">
+      <strong>Categoría: Amazónico</strong>
+    </div>
+
+    <h1 *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000302'">Cacao en Barra</h1>
+    <div *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000302'" class="categoria">
+      <strong>Categoría: Amázonico</strong>
+    </div>
+
+    <h1 *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000405'">Camu Camu</h1>
+    <div *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000405'" class="categoria">
+      <strong>Categoría: Amazónico</strong>
+    </div>
+
+    <h1 *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000304'">Caco Manteca</h1>
+    <div *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000304'" class="categoria">
+      <strong>Categoría: Amazónico</strong>
+    </div>
+
+    <div *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000201'">También conocida como la
+      “zanahoria blanca”. La Arracacha es una de las plantas andinas más antiguas y la más cultivada en el período
+      preincaico, cuya domesticación precedió a la papa y al maíz. Las raíces contienen almidón de fácil digestibilidad.
+      La arracacha, con su agradable sabor, también contiene minerales y otros micronutrientes. Es especialmente rico en
+      calcio y hierro, y vitamina B3 (niacina). Las raíces amarillas brillantes son una fuente indudable de vitamina A.
+
+      La arracacha en polvo orgánica de Ecoandino es el ingrediente perfecto para que tus platos disfruten de un estilo
+      de vida saludable. ¡Te encantará el la arracacha en polvo orgánica de Ecoandino!</div>
+
+    <div *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000101'">Algarrobo, también conocido
+      como mezquite, se cultiva en la costa norte de Perú, especialmente en el departamento de Piura. Este superalimento
+      se usa desde tiempos prehispánicos. Es un producto gourmet.
+
+      El algarrobo en polvo de Ecoandino es un superalimento especial debido a su sabor y aroma únicos. Puedes hacer
+      muchas recetas deliciosas con este producto de alta calidad o puede mezclarlo en licuados y batidos. El algarrobo
+      en polvo orgánico es una gran opción para disfrutar de un estilo de vida saludable. ¡Te encantará el Algarrobo de
+      Ecoandino!
+
+    </div>
+
+    <div *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000301'">El árbol de cacao crece en
+      la Amazonía peruana. Tradicionalmente utilizado como una bebida medicinal, la fruta de cacao se considera un
+      estimulante natural con altos niveles de proteínas y antioxidantes en forma de flavonoides. El Cacao Criollo,
+      conocido como “El Rey del Cacao”, es un producto de variedad escasa que se valora por su grano de alta calidad con
+      aroma y sabor fino. El cacao no es solo un ingrediente sino también un superalimento.</div>
+
+    <div *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000302'">El árbol de cacao crece en
+      la Amazonía peruana. Tradicionalmente utilizado como una bebida medicinal, la fruta de cacao se considera un
+      estimulante natural con altos niveles de proteínas y antioxidantes en forma de flavonoides. El Cacao Criollo,
+      conocido como “El Rey del Cacao”, es un producto de variedad escasa que se valora por su grano de alta calidad con
+      aroma y sabor fino. El cacao no es solo un ingrediente sino también un superalimento.</div>
+
+
+    <div *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000405'">El camu camu es una de las
+      fuentes más abundantes de vitamina C natural. Puede proporcionar hasta 60 veces más vitamina C que una naranja. Es
+      un poderoso antioxidante. Esta fruta de la selva amazónica se seca a baja temperatura para proteger sus cualidades
+      nutricionales. Levanta el ánimo y fortalece el sistema inmune y nervioso. Ayuda a mantener los ojos y la piel
+      sanos, también niveles saludables de glóbulos blancos. Te ayuda a tener una buena salud.</div>
+
+    <div *ngIf="productoPresentacionUsuarioInterno.idProductoPresentacion === 'PP202000304'">El árbol de cacao crece en
+      la Amazonía peruana. Tradicionalmente utilizado como una bebida medicinal, la fruta de cacao se considera un
+      estimulante natural con altos niveles de proteínas y antioxidantes en forma de flavonoides. El Cacao Criollo,
+      conocido como “El Rey del Cacao”, es un producto de variedad escasa que se valora por su grano de alta calidad con
+      aroma y sabor fino. El cacao no es solo un ingrediente sino también un superalimento.</div>
+
+    <div class="wrapper-input">
+      <div>Ingresar Cantidad:</div>
+      <input class="input-kg" [(ngModel)]="cantidad" name="cantidad"> <strong>Kg</strong>
+      <button class="button-cotizar" (click)="cotizarPedido()" type="submit">Cotizar</button>
+    </div>
+
+    <div class="div-precio">S/. {{this.precio}}</div>
+
+
+    <div class="wrapper-button">
+      <button class="button-quotation" data-toggle="modal" data-target="#dialogo1" type="submit">solicitar
+        Muestra</button>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="modal fade" id="dialogo1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+
+          <div class="modal-header">
+            <h2 class="modal-title">Registrar Solicitud Muestra</h2>
+            <button type="button" class="close" data-dismiss="modal">X</button>
+          </div>
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="nombre" class="control-label">Ciudad/Pais:</label>
+                  <input type="text" class="form-control" [(ngModel)]="ordenmuestra.dirMuestra" name="dirMuestra"
+                    required maxlength="120">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#dialogo2"
+                  (click)="registrarOrdenMuestra()" data-dismiss="modal">Solicitar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container">
+    <div class="modal fade" id="dialogo2">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header ecoandino-header">
+            <h4 class="modal-title title-ecoandino">Ecoandino s.a.c</h4>
+            <button type="button" class="close" data-dismiss="modal">X</button>
+          </div>
+          <div class="modal-content">
+            <p class="text-final"> Su solicitud de muestra ha sido registrada, estaremos contactándonos con usted en las
+              proximas 24
+              horas para coordinar el pago por envío</p>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

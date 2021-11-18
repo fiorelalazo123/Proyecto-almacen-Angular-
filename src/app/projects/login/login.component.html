@@ -10,8 +10,10 @@
     <div class="login">
       <h2>LOG IN</h2>
       <div class="inputbox">
-        <input type="text" [(ngModel)]="user" name="user" placeholder="  USUARIO">
-        <input type="password" [(ngModel)]="password" name="password" placeholder="  CONTRASEÑA">
+        <input type="text" [(ngModel)]="usuarioInterno.dniUsuario" placeholder="  USUARIO">
+        <input type="password" [(ngModel)]="usuarioInterno.passUsuario" placeholder="  CONTRASEÑA">
+        <!-- <input type="text" [(ngModel)]="cliente.rucCliente" placeholder="  USUARIO">
+        <input type="password" [(ngModel)]="cliente.passCliente" placeholder="  CONTRASEÑA"> -->
       </div>
         <p (click)="abrirRegistro()">¿NO ESTÁS REGISTRADO?</p>
       <div class="wrapper-button">

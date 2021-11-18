@@ -7,12 +7,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'proyecto-web-idat';
+  title = 'proyecto-almacen';
 
   public constructor(private readonly router: Router) {
   }
 
-  public async ngOnInit() {
+  public ngOnInit(): void {
     this.initRouter();
   }
 
