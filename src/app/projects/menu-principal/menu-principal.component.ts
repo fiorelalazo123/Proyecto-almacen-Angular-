@@ -13,7 +13,23 @@ export class MenuPrincipalComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public irProductos() {
+  irProductos(): void {
     this.router.navigate(['mantenimiento-productos']);
+  }
+
+  irCatalogoProductos(): void {
+    this.router.navigate(['productos-ecoandino']);
+  }
+
+  irMisOrdenesMuestra(): void {
+    this.router.navigate(['orden-pedido']);
+  }
+
+  irMisPedidos(): void {
+    this.router.navigate(['orden-pedido-atendido']);
+  }
+
+  irproductoPresentacion(): void {
+    this.router.navigate(['producto-presentacion']);
   }
 }

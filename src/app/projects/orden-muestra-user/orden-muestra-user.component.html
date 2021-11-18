@@ -1,0 +1,152 @@
+<!-- Menu BAR -->
+<header class="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"> <img class="img-logo" src="/assets/img/logo-ecoandino-gris.png" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" (click)="irMenu()">Inicio <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Mantenimientos
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" (click)="irproductoPresentacion()">Producto-presentación</a>
+            <a class="dropdown-item" (click)="irProductos()">Productos</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" (click)="irPresentacion()">Presentación</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Lista Ordenes
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" (click)="irOrdenMuestraUser()">Orden-muestra</a>
+            <a class="dropdown-item" (click)="irOrdenPedidoUser()">Órdenes-pedidos</a>
+            <!-- <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a> -->
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Cerrar Sesion</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<!-- - -->
+
+<form id="frmFormularioABC" runat="server">
+  <!--PONER AQUÍ EL CÓDIGO HTML-->
+  <div class="container-fluid">
+    <h1>Listado de Órdenes Muestra</h1>
+    <hr />
+    <br />
+    <br />
+    <div class="column-busqueda">
+      <div class="col-sm-3">
+        <div class="form-group">
+          <label for="moneda" class="control-label">ID Cliente:</label>
+          <input type="text" class="form-control" [(ngModel)]="ordenmuestra.idCliente" name="idCliente" required
+            maxlength="20">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="form-group">
+          <label for="moneda" class="control-label">Dias:</label>
+          <input type="text" class="form-control" [(ngModel)]="dias" name="dias" required maxlength="20">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <button class="button-cotizar" (click)="buscarCliente()" type="submit">Buscar cliente</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <table class="table table-bordered table-striped table-hover">
+          <thead>
+            <tr>
+              <th colspan="10" class="text-center">Listado de Órdenes Muestra</th>
+            </tr>
+            <tr>
+              <th>Código</th>
+              <th>Producto Presentación</th>
+              <th>Nombre Producto</th>
+              <th>Presentacion</th>
+              <th>Razón Social</th>
+              <th>Fecha de Registro</th>
+              <th>Fecha de Entrega</th>
+              <th>Estado</th>
+              <th colspan="2" class="text-center">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let ordenesMuestra of ordenmuestraData">
+              <td>{{ordenesMuestra.idOrdenMuestra}}</td>
+              <td>{{ordenesMuestra.idProductoPresentacion}}</td>
+              <td>{{ordenesMuestra.nomProducto}}</td>
+              <td>{{ordenesMuestra.denomPresentacion}}</td>
+              <td>{{ordenesMuestra.razonSocial}}</td>
+              <td>{{ordenesMuestra.fecRegMuestra}}</td>
+              <td>{{ordenesMuestra.fecEntMuestra}}</td>
+              <td>{{ordenesMuestra.dirMuestra}}</td>
+              <td>{{ordenesMuestra.estPedido}}</td>
+              <td class="text-center"><a class="btn btn-primary" data-toggle="modal" data-target="#dialogo2">
+                  Atender orden</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</form>
+
+<div class="container">
+  <div class="modal fade" id="dialogo2">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Atender Orden Muestra</h2>
+          <button type="button" class="close" data-dismiss="modal">X</button>
+        </div>
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="nombre" class="control-label">Fecha Entrega:</label>
+                <!-- <input type="text" class="form-control" [(ngModel)]="ordenmuestra.fecEntMuestra" name="fecEntMuestra"
+                  required maxlength="120"> -->
+                <input type="date" class="form-control" [(ngModel)]="ordenmuestra.fecEntMuestra" name="fecEntMuestra">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary" data-toggle="modal" (click)="atenderOrdenMuestra()"
+                data-dismiss="modal">Atender</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

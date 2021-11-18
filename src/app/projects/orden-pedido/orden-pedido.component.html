@@ -1,0 +1,139 @@
+<header class="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"> <img class="img-logo" src="/assets/img/logo-ecoandino.png" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" (click)="irCatalogoProductos()">Productos <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="irMisPedido()">Mis Pedidos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Cerrar Sesión</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<form id="frmFormularioABC" runat="server">
+  <!--PONER AQUÍ EL CÓDIGO HTML-->
+  <div class="container-fluid">
+    <h1>Listado de mis Ordenes de Muestra</h1>
+    <hr />
+    <br />
+    <br />
+    <div class="row">
+      <div class="col-sm-12">
+        <table class="table table-bordered table-striped table-hover">
+          <thead>
+            <tr>
+              <th colspan="10" class="text-center">Listado de Órdenes Muestra</th>
+            </tr>
+            <tr>
+              <th>Código</th>
+              <th>Producto Presentación</th>
+              <th>Nombre Producto</th>
+              <th>Presentacion</th>
+              <th>Razón Social</th>
+              <th>Fecha de Registro</th>
+              <th>Fecha de Entrega</th>
+              <th>Direccion envío</th>
+              <th>Estado</th>
+              <th colspan="2" class="text-center">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let ordenesMuestra of ordenmuestraData">
+              <td>{{ordenesMuestra.idOrdenMuestra}}</td>
+              <td>{{ordenesMuestra.idProductoPresentacion}}</td>
+              <td>{{ordenesMuestra.nomProducto}}</td>
+              <td>{{ordenesMuestra.denomPresentacion}}</td>
+              <td>{{ordenesMuestra.razonSocial}}</td>
+              <td>{{ordenesMuestra.fecRegMuestra}}</td>
+              <td>{{ordenesMuestra.fecEntMuestra}}</td>
+              <td>{{ordenesMuestra.dirMuestra}}</td>
+              <td *ngIf="ordenesMuestra.estPedido === 'Atendido'" >{{ordenesMuestra.estPedido}}</td>
+              <td *ngIf="ordenesMuestra.estPedido === 'Pendiente'" class="text-center" colspan="2">{{ordenesMuestra.estPedido}}</td>
+              <td *ngIf="ordenesMuestra.estPedido === 'Atendido'" class="text-center"><a class="btn btn-primary" data-toggle="modal" data-target="#dialogo1">
+                  Solicitar pedido</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+<!-- MODAL REGISTRO -->
+
+<div class="container">
+  <div class="modal fade" id="dialogo1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- cabecera del diálogo -->
+        <div class="modal-header">
+          <h4 class="modal-title">Registrar Orden de Pedido</h4>
+          <button type="button" class="close" data-dismiss="modal">X</button>
+        </div>
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="moneda" class="control-label">Pais/ ciudad :</label>
+                <input type="text" class="form-control" [(ngModel)]="ordenpedido.dirPedido" name="dirPedido" required
+                  maxlength="100">
+              </div>
+              <div class="form-group">
+                <label for="moneda" class="control-label">Codigo Postal:</label>
+                <input type="text" class="form-control" [(ngModel)]="ordenpedido.codigoPostal" name="codigoPostal"
+                  required maxlength="50">
+              </div>
+              <div class="form-group">
+                <label for="moneda" class="control-label">Cantidad Kg:</label>
+                <input type="text" class="form-control" [(ngModel)]="ordenpedido.cantPedido" name="dirProveedor"
+                  required maxlength="100">
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#dialogo2" (click)="registrarOrdenPedido()"
+                  data-dismiss="modal">Solicitar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- - -->
+
+<div class="container">
+  <div class="modal fade" id="dialogo2">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header ecoandino-header">
+          <h4 class="modal-title title-ecoandino">Ecoandino s.a.c</h4>
+          <button type="button" class="close" data-dismiss="modal">X</button>
+        </div>
+        <div class="modal-content">
+          <p class="text-final"> Su pedido ha sido registrado, estaremos contactándonos con usted en las próximas 24
+            horas para ultimar detalles.</p>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" (click)="irMenuPrincipal()"
+              data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,82 @@
+<!-- Menu BAR -->
+<header class="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"> <img class="img-logo" src="/assets/img/logo-ecoandino.png" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" (click)="irCatalogoProductos()">Productos <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="irMisOrdenesMuestra()">Mis Ordenes Muestras</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="irMisPedidos()">Mis Pedidos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Cerrar Sesion</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- - -->
+<div class="wrapper-title">
+  <div>Mis Pedidos</div>
+</div>
+
+<div class="wrapper-select">
+  <h2 class="text-select">Seleccione el periodo:</h2>
+  <select class="select-pedido" [(ngModel)]="dias" (change)="capturar()">
+    <option value="0">Una semana</option>
+    <option value="7" selected>Hoy</option>
+    <option value="30">Un mes</option>
+    <option value="360">Un año</option>
+  </select>
+</div>
+<div class="wrapper-ecoandino">
+<div *ngFor="let ordenesPedido of ordenpedidoData" class="card-ecoandino card mb-3">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img *ngIf="ordenesPedido.idProductoPresentacion === 'PP202000201'" class="card-img-top"
+        src="assets/img/pp00201.png" alt="Card image cap">
+      <img *ngIf="ordenesPedido.idProductoPresentacion === 'PP202000101'" class="card-img-top"
+        src="assets/img/pp00101.png" alt="Card image cap">
+      <img *ngIf="ordenesPedido.idProductoPresentacion === 'PP202000301'" class="card-img-top"
+        src="assets/img/pp00301.png" alt="Card image cap">
+      <img *ngIf="ordenesPedido.idProductoPresentacion === 'PP202000302'" class="card-img-top"
+        src="assets/img/pp00302.png" alt="Card image cap">
+      <img *ngIf="ordenesPedido.idProductoPresentacion === 'PP202000405'" class="card-img-top"
+        src="assets/img/pp00405.png" alt="Card image cap">
+      <img *ngIf="ordenesPedido.idProductoPresentacion === 'PP202000304'" class="card-img-top"
+        src="assets/img/images.jpg" alt="Card image cap">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p class="card-text"><strong>Orden de Pedido:</strong> &nbsp;&nbsp;{{ordenesPedido.idOrdenPedido}}</p>
+        <p class="card-text"><strong>Orden de Muestra:</strong> &nbsp;&nbsp;{{ordenesPedido.idOrdenMuestra}}</p>
+        <p class="card-text"><strong>Razón Social:</strong> &nbsp;&nbsp;{{ordenesPedido.razonSocial}}</p>
+        <p class="card-text"><strong>Producto:</strong> &nbsp;&nbsp;{{ordenesPedido.nomProducto}}</p>
+        <p class="card-text"><strong>Presentacion:</strong> &nbsp;&nbsp;{{ordenesPedido.idProductoPresentacion}}</p>
+        <p class="card-text"><strong>Fase:</strong> &nbsp;&nbsp;{{ordenesPedido.denomFase}}</p>
+        <p class="card-text"><strong>Destino:</strong> &nbsp;&nbsp;{{ordenesPedido.denomDestino}}</p>
+        <p class="card-text"><strong>Fecha de Registro:</strong> &nbsp;&nbsp;{{ordenesPedido.fecRegPedido}}</p>
+        <p class="card-text"><strong>Fecha de Inicio:</strong> &nbsp;&nbsp;{{ordenesPedido.fechaInicio}}</p>
+        <p class="card-text"><strong>Fecha de Entrega:</strong> &nbsp;&nbsp;{{ordenesPedido.fechaEntrega}}</p>
+        <p class="card-text"><strong>Dirección:</strong> &nbsp;&nbsp;{{ordenesPedido.dirPedido}}</p>
+        <p class="card-text"><strong>Código Postal:</strong> &nbsp;&nbsp;{{ordenesPedido.codigoPostal}}</p>
+        <p class="card-text"><strong>Cantidad (Kg):</strong> &nbsp;&nbsp;{{ordenesPedido.cantPedido}}</p>
+        <p class="card-text"><strong>Estado del Pedido:</strong> &nbsp;&nbsp;{{ordenesPedido.estPedido}}</p>
+        <p class="card-text"><strong>Precio Total:</strong> &nbsp;&nbsp;{{ordenesPedido.precioTotal}}</p>
+        <p class="card-text"><small class="text-muted">Last updated 2 days ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

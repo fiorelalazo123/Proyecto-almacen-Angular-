@@ -1,7 +1,7 @@
 export class ClienteData {
   idCliente: string;
   razonSocial: string;
-  rucCliente: string;
+  rucCliente: number;
   corrCliente: string;
   paisCliente: string;
   dirCliente: string;

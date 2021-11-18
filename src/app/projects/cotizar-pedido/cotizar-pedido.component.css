@@ -1,0 +1,175 @@
+/* .wrapper-menu-principal {
+  background-image: url('/assets/img/slider.jpg');
+  width: 100%;
+  height: 821;
+  background-size: cover;
+} */
+
+.header {
+  /* background:  url('/assets/img/slider.jpg') no-repeat center;
+  background-size: cover; */
+  width: 100%;
+}
+
+.header .navbar {
+  background-color: #7DCEA0 !important;
+}
+
+.img-logo{
+  width: 230px;
+  height: 43px;
+}
+
+.navbar-brand {
+  display: inline-block;
+  /* padding-top: 31px; */
+  margin-left: 87px;
+  padding-bottom: .3125rem;
+  margin-right: 11%;
+  font-size: 1.25rem;
+  line-height: inherit;
+  /* white-space: nowrap; */
+}
+
+.navbar-light .navbar-nav .nav-link {
+  margin-top: 10px;
+  font-size: 21px;
+  color: white;
+  margin-left: 20px;
+}
+
+.image-ecoandino {
+  max-width: 452px;
+  margin-top: 124px;
+}
+
+.mr-auto, .mx-auto {
+  margin-left: 500px;
+  font-family: sans-serif;
+}
+
+.info {
+  margin: 40px 0;
+  display: flex;
+  text-align: center;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.info-column {
+  width: calc(47% - 208px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 18px 30px;
+}
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 50px;
+  margin-top: 41px;
+}
+
+.wrapper-image {
+  margin: 25px 115px;
+  text-align: center;
+  max-width: 363px;
+  background: #E8EEEB;
+  padding: 65px 20px;
+  height: 500px;
+}
+.card-img-top {
+  width: 270px;
+}
+
+.title {
+  margin: 50px 120px 0;
+}
+
+.div-precio {
+  font-size: 45px;
+  color: #35BB6F;
+  margin-top: 35px;
+}
+
+.wrapper-quotation {
+  display: flex;
+}
+
+.wrapper-description {
+  margin-top: 52px;
+  max-width: 700px;
+}
+
+.wrapper-input {
+  display: flex;
+  margin-top: 48px;
+  font-size: 15px;
+  max-height: 46px;
+  font-family: 'Signika';
+}
+
+.input-kg {
+  margin-left: 20px;
+  margin-right: 10px;
+  margin-top: -5px;
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid #78807C;
+}
+
+.categoria {
+  color: #35BB6F;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.button-quotation {
+  background-color: #35BB6F;
+  border: none;
+  border-radius: 23px;
+  margin-top: 20px;
+  padding: 10px 94px;
+  font-size: 16px;
+}
+
+.text-final {
+
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  font-size: 19px;
+}
+
+.title-ecoandino {
+  font-family: 'Lemonada', cursive;
+  font-size: 28px;
+    margin-top: 13px;
+}
+
+/* .modal.show .modal-dialog {
+  margin-top: 257px;
+} */
+
+.ecoandino-header {
+  background: #35BB6F;
+  color: #ffff;
+}
+
+.button-cotizar {
+  background-color: #347FD4;
+  border: none;
+  margin-left: 10px;
+  border-radius: 23px;
+  padding: 0px 49px;
+  font-size: 16px;
+}
+
+.wrapper-button {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}

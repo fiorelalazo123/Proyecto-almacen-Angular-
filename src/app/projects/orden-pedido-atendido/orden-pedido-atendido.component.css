@@ -1,0 +1,102 @@
+/* .wrapper-menu-principal {
+  background-image: url('/assets/img/slider.jpg');
+  width: 100%;
+  height: 821;
+  background-size: cover;
+} */
+
+.header {
+  /* background:  url('/assets/img/slider.jpg') no-repeat center;
+  background-size: cover; */
+  width: 100%;
+}
+
+.header .navbar {
+  background-color: #7DCEA0 !important;
+}
+
+.img-logo{
+  width: 230px;
+  height: 43px;
+}
+
+.navbar-brand {
+  display: inline-block;
+  /* padding-top: 31px; */
+  margin-left: 87px;
+  padding-bottom: .3125rem;
+  margin-right: 11%;
+  font-size: 1.25rem;
+  line-height: inherit;
+  /* white-space: nowrap; */
+}
+
+.navbar-light .navbar-nav .nav-link {
+  margin-top: 10px;
+  font-size: 21px;
+  color: white;
+  margin-left: 20px;
+}
+
+.image-ecoandino {
+  max-width: 452px;
+  margin-top: 124px;
+}
+
+.card-ecoandino {
+  max-width: 602px;
+  margin-top: 20px;
+  margin-left: 170px;
+}
+
+.wrapper-ecoandino {
+  display: flex;
+}
+
+.mr-auto, .mx-auto {
+  margin-left: 500px;
+  font-family: sans-serif;
+}
+
+.wrapper-card {
+  display: flex;
+  margin-top: 34px;
+  margin-left: 100px;
+}
+
+.wrapper-image {
+  margin: 25px 44px;
+  text-align: center;
+  max-width: 363px;
+  background: #E8EEEB;
+}
+
+.select-pedido {
+  border-radius: 7px;
+  padding: 10px 30px;
+  height: 47px;
+  margin-left: 15px;
+  font-size: 17px;
+  border: 1px solid rgba(0,0,0,.125);
+}
+
+.text-select {
+  margin-top: 11px;
+}
+
+.wrapper-select {
+  display: flex;
+  margin-left: 168px;
+  margin-top: 29px;
+}
+
+.card-img-top {
+  width: 257px;
+  margin-top: 115px;
+}
+
+.wrapper-title {
+  margin-top: 40px;
+  margin-left: 110px;
+  font-size: 42px;
+}

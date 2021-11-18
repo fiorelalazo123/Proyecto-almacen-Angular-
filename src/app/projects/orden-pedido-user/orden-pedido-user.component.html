@@ -1,0 +1,177 @@
+<!-- Menu BAR -->
+<header class="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"> <img class="img-logo" src="/assets/img/logo-ecoandino-gris.png" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" (click)="irMenu()">Inicio <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Mantenimientos
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" (click)="irproductoPresentacion()">Producto-presentación</a>
+            <a class="dropdown-item" (click)="irProductos()">Productos</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" (click)="irPresentacion()">Presentación</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Lista Ordenes
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" (click)="irOrdenMuestraUser()">Orden-muestra</a>
+            <a class="dropdown-item" (click)="irOrdenPedidoUser()">Órdenes-pedidos</a>
+            <!-- <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a> -->
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Cerrar Sesion</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<!-- - -->
+
+<form id="frmFormularioABC" runat="server">
+  <!--PONER AQUÍ EL CÓDIGO HTML-->
+  <div class="container-fluid">
+    <h1>Listado de Órdenes Pedido</h1>
+    <hr />
+    <br />
+    <br />
+    <!-- <div class="column-busqueda">
+      <div class="col-sm-3">
+        <div class="form-group">
+          <label for="moneda" class="control-label">ID Cliente:</label>
+          <input type="text" class="form-control" [(ngModel)]="ordenpedidoui.idUsuarioInterno" name="idCliente" required
+            maxlength="20">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="form-group">
+          <label for="moneda" class="control-label">Dias:</label>
+          <input type="text" class="form-control" [(ngModel)]="dias" name="dias" required maxlength="20">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <button class="button-cotizar" (click)="buscarCliente()" type="submit">Buscar cliente</button>
+      </div> -->
+    <!-- <select class="form-select" aria-label="Default select example">
+          <option name="1">Seleccione</option>
+          <option [(ngModel)]="ordenmuestra.idCliente" (ngModelChange)="updateWorkout($event)" name="idCliente">
+            CL2001001</option>
+          <option [(ngModel)]="ordenmuestra.idCliente" (ngModelChange)="updateWorkout($event)" name="idCliente">
+            CL2001002</option>
+        </select> -->
+
+    <!-- <select class="form-select" aria-label="Default select example">
+          <option value=0>Seleccione</option>
+          <option [(ngModel)]="dias" name="dias1" (ngModelChange)="updateWorkout($event)" value=365>Un año</option>
+          <option [(ngModel)]="dias" name="dias2" value=3>Un mes</option>
+          <option [(ngModel)]="dias" name="dias2" value=7>Una Semana</option>
+        </select> -->
+    <!-- </div> -->
+    <div class="row">
+      <div class="col-sm-12">
+        <table class="table table-bordered table-striped table-hover">
+          <thead>
+            <tr>
+              <th colspan="12" class="text-center">Listado de Órdenes Pedido</th>
+            </tr>
+            <tr>
+              <th>Código</th>
+              <th>Orden Muestra</th>
+              <th>Fase</th>
+              <th>Fecha registro</th>
+              <th>Fecha entrega</th>
+              <th>Dirección envio</th>
+              <th>Código postal</th>
+              <th>Cant.</th>
+              <th>Precio Total</th>
+              <th>Estado</th>
+              <th colspan="2" class="text-center">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let ordenesPedido of ordenpedidoData">
+              <td>{{ordenesPedido.idOrdenPedido}}</td>
+              <td>{{ordenesPedido.idOrdenMuestra}}</td>
+              <td>{{ordenesPedido.denomFase}}</td>
+              <td>{{ordenesPedido.fecRegPedido}}</td>
+              <td>{{ordenesPedido.fechaEntrega}}</td>
+              <td>{{ordenesPedido.dirPedido}}</td>
+              <td>{{ordenesPedido.codigoPostal}}</td>
+              <td>{{ordenesPedido.cantPedido}}</td>
+              <td>{{ordenesPedido.precioTotal}}</td>
+              <td>{{ordenesPedido.estPedido}}</td>
+              <td class="text-center"><a class="btn btn-primary" data-toggle="modal" data-target="#dialogo2">
+                  Atender pedido</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+<div class="container">
+  <div class="modal fade" id="dialogo2">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Atender Orden Pedido</h2>
+          <button type="button" class="close" data-dismiss="modal">X</button>
+        </div>
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="nombre" class="control-label">Fecha Inicio:</label>
+                <!-- <input type="text" class="form-control" [(ngModel)]="ordenpedido.fechaInicio" name="fechaInicio"
+                  required maxlength="120"> -->
+                <input type="date" class="form-control" [(ngModel)]="ordenpedido.fechaInicio" name="fechaInicio">
+              </div>
+              <div class="form-group">
+                <label for="nombre" class="control-label">Fecha Entrega:</label>
+                <!-- <input type="text" class="form-control" [(ngModel)]="ordenpedido.fechaEntrega" name="fecEntMuestra"
+                  required maxlength="120"> -->
+                <input type="date" class="form-control" [(ngModel)]="ordenpedido.fechaEntrega" name="fechaEntrega">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary" data-toggle="modal" (click)="atenderOrdenPedido()"
+                data-dismiss="modal">Atender</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

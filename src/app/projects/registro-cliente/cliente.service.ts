@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ClienteService {
 
-  private url: string = 'http://localhost:8080/ecoandino/cliente/registrar';
+  private url = 'http://localhost:8080/ecoandino/cliente/registrar';
 
   constructor(private http: HttpClient) { }
 
